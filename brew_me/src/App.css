@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: #F6EBCF;
 }
 
 .App-logo {
@@ -37,13 +38,62 @@
   }
 }
 
+h1 {
+  font-size: 4rem;
+  padding-top: 1%;
+  margin: 0;
+  font-family: 'Luckiest Guy', cursive;
+  color: #AE5100;
+}
+
+h3 {
+  color: #AE5100;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.4rem;
+}
+
+h4 {
+  color: #AE5100;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3rem;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+a {
+  color: #AE5100;
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+a:hover {
+  color: #503500;
+}
+
+address {
+  color: #503500;
+  font-size: .8rem;
+}
+
+.ui.input>input:focus {
+  color: #503500;
+  border-color: #AE5100;
+}
+
 .ui.placeholder.segment {
   min-height: 0;
   padding-bottom: 0;
+  margin-top: 0;
+  background: white;
 }
 
 .ui[class*="very relaxed"].grid>.column:not(.row) {
   width: 35%;
+}
+
+.ui.grid>.column+.divider {
+  left: 50%;
+  color: #AE5100;
 }
 
 .ui.grid {

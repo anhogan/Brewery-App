@@ -33,7 +33,7 @@ const Brewery = (props) => {
             </div>
           ))}
           {props.error !== "" ? <h4>{props.error}</h4> : null}
-          {props.breweries.length === 0 ? <h4>City not found</h4> : null}
+          {props.breweries.length === 0 ? <h4>No Breweries found <i class="frown outline icon"></i></h4> : null}
         </div>
       )}
     </div>
