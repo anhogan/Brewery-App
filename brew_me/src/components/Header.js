@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { searchBreweriesByCity, searchBreweriesByState } from '../actions/index';
 import SearchBar from './SearchBar';
+import beer_mug from '../beer_mug.png';
 
 const Header = (props) => {
   const [cityInput, setCityInput] = useState('');
@@ -29,7 +30,7 @@ const Header = (props) => {
 
   return (
     <div>
-      <h1>BREW ME</h1>
+      <h1>BREW ME <img className="header_img" src={beer_mug} alt="Beer Mug" /></h1>
       <SearchBar 
         cityInput={cityInput}
         stateInput={stateInput} 

@@ -116,3 +116,7 @@ address {
   margin: 0 auto;
   border-radius: 5px;
 }
+
+.header_img {
+  width: 3%;
+}
