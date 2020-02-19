@@ -1,7 +1,8 @@
 import { FETCH_BREWS, FETCH_BREWS_SUCCESS, FETCH_BREWS_FAILURE } from '../actions/index';
 
 const initialState = {
-  smurfs: [],
+  breweries: [],
+  city: 'raleigh',
   error: '',
   isFetching: false
 }
@@ -11,13 +12,14 @@ export const reducer = (state = initialState, action) => {
     case FETCH_BREWS:
       return {
         ...state,
+        city: action.payload,
         isFetching: true,
         error: ''
       }
     case FETCH_BREWS_SUCCESS:
       return {
         ...state,
-        pokemon: action.payload,
+        breweries: action.payload,
         isFetching: false,
         error: ''
       }

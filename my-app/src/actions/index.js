@@ -6,7 +6,7 @@ export const FETCH_BREWS_FAILURE = 'FETCH_BREWS_FAILURE';
 
 export const getBreweries = () => (dispatch) => {
   dispatch({ type: FETCH_BREWS });
-  axios.get('https://api.openbrewerydb.org/breweries?by_city=raleigh')
+  axios.get(`https://api.openbrewerydb.org/breweries?by_city=raleigh`)
     .then(response => {
       console.log(response);
       dispatch({ type: FETCH_BREWS_SUCCESS, payload: response.data });
