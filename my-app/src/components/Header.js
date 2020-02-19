@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { searchBreweries } from '../actions/index';
 import SearchBar from './SearchBar';
 
-const Header = () => {
+const Header = (props) => {
   const [input, setInput] = useState('');
 
   const handleChange = (event) => {
@@ -11,10 +12,10 @@ const Header = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // PASS SEARCH TERM TO ACTIONS FOLDER?
+    props.searchBreweries(input);
     setInput('');
   };
-  
+
   return (
     <div>
       <SearchBar 
@@ -25,10 +26,4 @@ const Header = () => {
   )
 };
 
-const mapStateToProps = state => {
-  return {
-
-  }
-};
-
-export default connect(mapStateToProps, {})(Header);
+export default connect(null, { searchBreweries })(Header);

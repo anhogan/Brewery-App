@@ -5,14 +5,16 @@ import Brewery from './Brewery';
 const BreweryComponent = (props) => {
   return (
     <div>
-      <Brewery breweries={props.breweries}/>
+      <Brewery 
+        breweries={props.breweries} 
+        isFetching={props.isFetching} 
+        error={props.error} />
     </div>
   )
 };
 
 const mapStateToProps = state => {
   return {
-    // city: state.city,
     breweries: state.breweries,
     error: state.error,
     isFetching: state.isFetching

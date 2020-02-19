@@ -10,13 +10,14 @@ const Brewery = (props) => {
         <div>
           {props.breweries.map((brewery) => (
             <div>
-              <h4>{brewery.name}</h4>
-              <h6>Address</h6>
+              <h3>{brewery.name}</h3>
+              <h4>Address</h4>
               <p>{brewery.street}</p>
               <p>{brewery.city}, {brewery.state} {brewery.postal_code}</p>
               <a href={brewery.website_url}>{brewery.website_url}</a>
             </div>
           ))}
+          {props.error !== "" ? <h4>{props.error}</h4> : null}
         </div>
       )}
     </div>
