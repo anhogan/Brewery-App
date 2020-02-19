@@ -30,7 +30,9 @@ const Header = (props) => {
 
   return (
     <div>
-      <h1>BREW ME <img className="header_img" src={beer_mug} alt="Beer Mug" /></h1>
+      <div className="header-div">
+        <h1>BREW ME <img className="header_img" src={beer_mug} alt="Beer Mug" /></h1>
+      </div>
       <SearchBar 
         cityInput={cityInput}
         stateInput={stateInput} 
