@@ -24,6 +24,7 @@ const Brewery = (props) => {
                 <div className="description">
                   <address>{brewery.street}</address>
                   <address>{brewery.city}, {brewery.state}</address>
+                  <a href={`https://google.com/maps/place/${brewery.name}`} target="_blank">Directions</a>
                 </div>
                 <hr />
                 <div className="extra content">
