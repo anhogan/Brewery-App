@@ -9,7 +9,7 @@ const SearchBar = (props) => {
         <div id="for_city" className="search_inputs column">
           <div className="ui search">
             <form onSubmit={props.handleSubmitForCity}>
-              <div class="ui icon input">
+              <div className="ui icon input">
               <input
                 value={props.cityInput}
                 onChange={props.handleChangeForCity}
@@ -21,13 +21,13 @@ const SearchBar = (props) => {
             </form>
           </div>
         </div>
-        <div class="ui vertical divider">
+        <div className="ui vertical divider">
             Or
         </div>
         <div id="for_state" className="search_inputs column">
           <div className="ui search">
             <form onSubmit={props.handleSubmitForState}>
-              <div class="ui icon input">
+              <div className="ui icon input">
               <input
                 value={props.stateInput}
                 onChange={props.handleChangeForState}

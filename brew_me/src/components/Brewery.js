@@ -7,7 +7,7 @@ const Brewery = (props) => {
     <div>
       {props.isFetching ? (
         <div>
-          <div class="ui active centered inline loader"></div>
+          <div className="ui active centered inline loader"></div>
           <h3>Fetching Breweries...</h3>
         </div>
       ) : (
@@ -34,7 +34,7 @@ const Brewery = (props) => {
             </div>
           ))}
           {props.error !== "" ? <h4>{props.error}</h4> : null}
-          {props.breweries.length === 0 ? <h4>No Breweries found <i class="frown outline icon"></i></h4> : null}
+          {props.breweries.length === 0 ? <h4>No Breweries found <i className="frown outline icon"></i></h4> : null}
         </div>
       )}
     </div>
