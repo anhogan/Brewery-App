@@ -18,6 +18,7 @@ const Header = (props) => {
 
   return (
     <div>
+      <h1>BREW ME</h1>
       <SearchBar 
         input={input} 
         handleChange={handleChange} 

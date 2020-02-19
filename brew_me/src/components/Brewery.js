@@ -11,7 +11,6 @@ const Brewery = (props) => {
           {props.breweries.map((brewery) => (
             <div key={brewery.id}>
               <h3>{brewery.name}</h3>
-              <h4>Address</h4>
               <address>{brewery.street}</address>
               <address>{brewery.city}, {brewery.state}</address>
               <a href={brewery.website_url}>{brewery.website_url}</a>
