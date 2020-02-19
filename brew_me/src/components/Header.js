@@ -1,30 +1,44 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { searchBreweries } from '../actions/index';
+import { searchBreweriesByCity, searchBreweriesByState } from '../actions/index';
 import SearchBar from './SearchBar';
 
 const Header = (props) => {
-  const [input, setInput] = useState('');
+  const [cityInput, setCityInput] = useState('');
+  const [stateInput, setStateInput] = useState('');
 
-  const handleChange = (event) => {
-    setInput(event.target.value);
+  const handleChangeForCity = (event) => {
+    setCityInput(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleChangeForState = (event) => {
+    setStateInput(event.target.value);
+  };
+
+  const handleSubmitForCity = (event) => {
     event.preventDefault();
-    props.searchBreweries(input);
-    setInput('');
+    props.searchBreweriesByCity(cityInput);
+    setCityInput('');
+  };
+
+  const handleSubmitForState = (event) => {
+    event.preventDefault();
+    props.searchBreweriesByState(stateInput);
+    setStateInput('');
   };
 
   return (
     <div>
       <h1>BREW ME</h1>
       <SearchBar 
-        input={input} 
-        handleChange={handleChange} 
-        handleSubmit={handleSubmit} />
+        cityInput={cityInput}
+        stateInput={stateInput} 
+        handleChangeForCity={handleChangeForCity} 
+        handleSubmitForCity={handleSubmitForCity}
+        handleChangeForState={handleChangeForState} 
+        handleSubmitForState={handleSubmitForState} />
     </div>
   )
 };
 
-export default connect(null, { searchBreweries })(Header);
+export default connect(null, { searchBreweriesByCity, searchBreweriesByState })(Header);

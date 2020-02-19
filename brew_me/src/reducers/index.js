@@ -1,4 +1,4 @@
-import { FETCH_BREWS, FETCH_BREWS_SUCCESS, FETCH_BREWS_FAILURE, SEARCHING, SEARCH_SUCCESS, SEARCH_FAILURE } from '../actions/index';
+import { FETCH_BREWS, FETCH_BREWS_SUCCESS, FETCH_BREWS_FAILURE, SEARCHING_BY_CITY, SEARCH_SUCCESS_CITY, SEARCH_FAILURE_CITY, SEARCHING_BY_STATE, SEARCH_SUCCESS_STATE, SEARCH_FAILURE_STATE } from '../actions/index';
 
 const initialState = {
   breweries: [],
@@ -27,20 +27,39 @@ export const reducer = (state = initialState, action) => {
         isFetching: false,
         error: action.payload
       }
-    case SEARCHING:
+    case SEARCHING_BY_CITY:
       return {
         ...state,
         isFetching: true,
         error: ''
       }
-    case SEARCH_SUCCESS:
+    case SEARCH_SUCCESS_CITY:
       return {
         ...state,
         breweries: action.payload,
         isFetching: false,
         error: ''
       }
-    case SEARCH_FAILURE:
+    case SEARCH_FAILURE_CITY:
+      return {
+        ...state,
+        isFetching: false,
+        error: action.payload
+      }
+    case SEARCHING_BY_STATE:
+      return {
+        ...state,
+        isFetching: true,
+        error: ''
+      }
+    case SEARCH_SUCCESS_STATE:
+      return {
+        ...state,
+        breweries: action.payload,
+        isFetching: false,
+        error: ''
+      }
+    case SEARCH_FAILURE_STATE:
       return {
         ...state,
         isFetching: false,

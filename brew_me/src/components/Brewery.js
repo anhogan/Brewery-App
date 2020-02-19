@@ -27,7 +27,7 @@ const Brewery = (props) => {
                 </div>
                 <hr />
                 <div className="extra content">
-                  <a href={brewery.website_url}>{brewery.website_url}</a>
+                  <a href={brewery.website_url} target="_blank">{brewery.website_url}</a>
                 </div>
               </div>
             </div>

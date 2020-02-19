@@ -37,6 +37,15 @@
   }
 }
 
+.ui.placeholder.segment {
+  min-height: 0;
+  padding-bottom: 0;
+}
+
+.ui[class*="very relaxed"].grid>.column:not(.row) {
+  width: 35%;
+}
+
 .ui.grid {
   display: flex;
   justify-content: space-evenly;
