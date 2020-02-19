@@ -5,10 +5,10 @@ const SearchBar = (props) => {
   return (
     <div>
       <form onSubmit={props.handleSubmit}>
-      <input
-        value={props.input}
-        onChange={props.handleChange} />
-      <button onClick={props.handleSubmit}>Find Breweries</button>
+        <input
+          value={props.input}
+          onChange={props.handleChange} />
+        <button onClick={props.handleSubmit}>Find Breweries</button>
       </form>
     </div>
   )

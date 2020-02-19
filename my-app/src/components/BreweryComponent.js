@@ -5,20 +5,9 @@ import Brewery from './Brewery';
 const BreweryComponent = (props) => {
   return (
     <div>
-      <Brewery 
-        breweries={props.breweries} 
-        isFetching={props.isFetching} 
-        error={props.error} />
+      <Brewery />
     </div>
   )
 };
 
-const mapStateToProps = state => {
-  return {
-    breweries: state.breweries,
-    error: state.error,
-    isFetching: state.isFetching
-  }
-};
-
-export default connect(mapStateToProps, {})(BreweryComponent);
+export default connect(null, {})(BreweryComponent);
