@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const FETCH_BREWS = 'FETCH_BREWS';
 export const FETCH_BREWS_SUCCESS = 'FETCH_BREWS_SUCCESS';
 export const FETCH_BREWS_FAILURE = 'FETCH_BREWS_FAILURE';
