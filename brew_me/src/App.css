@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.ui.grid {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ui.grid>.column:not(.row) {
+  padding-top: 0;
+  margin: 2%;
+}
+
+.ui.card>.image {
+  background: none;
+  padding: 5%;
+}
+
+.ui.card>.image>img {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
