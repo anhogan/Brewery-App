@@ -30,6 +30,9 @@ const Brewery = (props) => {
                 <div className="extra content">
                   <a href={brewery.website_url} target="_blank">{brewery.website_url}</a>
                 </div>
+                {/* {brewery.tag_list.map((tag) => (
+                  <span>{tag}</span>
+                ))} */}
               </div>
             </div>
           ))}
