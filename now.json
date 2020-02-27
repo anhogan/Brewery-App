@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "brew_me",
+  "builds": [
+    {
+      "src": "brew_me/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "brew_me/$1"
+    }
+  ]
+}
