@@ -36,8 +36,8 @@ const Brewery = (props) => {
               </div>
             </div>
           ))}
-          {props.error !== "" ? <h4>{props.error}</h4> : null}
-          {props.breweries.length === 0 ? <h4>No Breweries found <i className="frown outline icon"></i></h4> : null}
+          {/* {props.error !== "" ? <h4>{props.error}</h4> : null} */}
+          {props.breweries.length === 0 ? <h4>No Breweries found for {props.error} <i className="frown outline icon"></i></h4> : null}
         </div>
       )}
     </div>

@@ -27,7 +27,7 @@ export const searchBreweriesByCity = (input) => (dispatch) => {
   dispatch({ type: SEARCHING_BY_CITY });
   axios.get(`https://api.openbrewerydb.org/breweries?by_city=${input}`)
     .then(response => {
-      dispatch({ type: SEARCH_SUCCESS_CITY, payload: response.data });
+      dispatch({ type: SEARCH_SUCCESS_CITY, payload: response.data, error: input });
     })
     .catch(error => {
       dispatch({ type: SEARCH_FAILURE_CITY, payload: error.message });
@@ -38,7 +38,7 @@ export const searchBreweriesByState = (input) => (dispatch) => {
   dispatch({ type: SEARCHING_BY_STATE });
   axios.get(`https://api.openbrewerydb.org/breweries?by_state=${input}`)
     .then(response => {
-      dispatch({ type: SEARCH_SUCCESS_STATE, payload: response.data });
+      dispatch({ type: SEARCH_SUCCESS_STATE, payload: response.data, error: input });
     })
     .catch(error => {
       dispatch({ type: SEARCH_FAILURE_STATE, payload: error.message });

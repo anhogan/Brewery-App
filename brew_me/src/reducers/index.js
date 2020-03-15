@@ -38,7 +38,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         breweries: action.payload,
         isFetching: false,
-        error: ''
+        error: action.error
       }
     case SEARCH_FAILURE_CITY:
       return {
@@ -57,7 +57,7 @@ export const reducer = (state = initialState, action) => {
         ...state,
         breweries: action.payload,
         isFetching: false,
-        error: ''
+        error: action.error
       }
     case SEARCH_FAILURE_STATE:
       return {
